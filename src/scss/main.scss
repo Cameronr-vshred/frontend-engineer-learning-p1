@@ -1,3 +1,14 @@
-body {
-    background:gray;
-}
+// components
+@import 'components/global';
+
+// global layouts
+@import 'layouts/footer';
+@import 'layouts/nav';
+
+// body layouts
+@import 'layouts/intro';
+@import 'layouts/upper-highlights';
+@import 'layouts/section-break';
+@import 'layouts/lower-highlights';
+@import 'layouts/contact-form';
+@import 'layouts/erik';
