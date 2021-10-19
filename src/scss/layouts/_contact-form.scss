@@ -1,0 +1,130 @@
+$contact-form-bg: rgba(242, 242, 242, 0.4) none repeat scroll 0 0 !default;
+
+.contact-form {
+    position       : relative;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : auto;
+    z-index        : 1;
+
+    @media screen and (min-width: 1600px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: $mobile-break) {
+        overflow: hidden;
+        max-height: 600px;
+    }
+
+    &__bg {
+        width  : 100%;
+        z-index: -1;
+    }
+
+    &__content {
+        position      : absolute;
+        display       : flex;
+        flex-direction: column;
+        flex-wrap     : nowrap;
+        max-width     : 100%;
+        text-align    : center;
+
+        @media screen and (max-width: $mobile-break) {
+            padding: 0 10px;
+        }
+
+    }
+
+    &__input {
+        display       : flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $mobile-break) {
+            gap           : 3%;
+            flex-direction: row;
+        }
+
+        &--btn {
+            margin-top : 5px;
+            margin-left: 51.5%;
+
+            @media screen and (max-width: $mobile-break) {
+                margin-left: 0;
+            }
+        }
+
+        &--left-col,
+        &--right-col {
+            display       : flex;
+            flex-direction: column;
+            max-width     : 50%;
+            width         : 100%;
+
+            @media screen and (max-width: $mobile-break) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__subtitle {
+        background   : $contact-form-bg;
+        border-radius: 5px;
+        color        : #000;
+        font-size    : 16px;
+        margin-bottom: 20px;
+        padding      : 20px 15px;
+        font-weight  : 400;
+    }
+
+    &__title {
+        color         : #fff;
+        text-transform: capitalize;
+        margin-bottom : 30px;
+        text-shadow   : 2px 2px #333;
+        font-weight   : 500;
+        font-size     : 36px;
+    }
+
+    @media screen and (max-width: $mobile-break) {}
+}
+
+.form-input {
+    background        : $contact-form-bg;
+    border            : none;
+    display           : block;
+    width             : 100%;
+    height            : 34px;
+    padding           : 6px 12px;
+    font-size         : 14px;
+    line-height       : 1.42857143;
+    color             : #555;
+    background-image  : none;
+    border-radius     : 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow        : inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition     : border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition        : border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    height            : 100%;
+    margin-bottom     : 15px;
+}
+
+label {
+    display: none;
+}
+
+::placeholder {
+    color: black;
+}
+
+textarea {
+    @media screen and (max-width: $mobile-break) {
+        min-height: 150px;
+        height: 100%;
+    }
+    @media screen and (max-width: 500px) {
+        min-height: 132px;
+        height: 100%;
+    }
+}

@@ -1,0 +1,104 @@
+$nav-bg             : #383E4C !default;
+$nav-hamburger-bg   : #333 !default;
+$nav-link           : #fff !default;
+$nav-link-border    : #646d7c !default;
+$nav-link-size      : 20px !default;
+$nav-link-bg-current: #49505F !default;
+$mobile-break       : 768px;
+
+header {
+    position : fixed;
+    max-width: 100%;
+    width    : 100%;
+    z-index  : 9;
+}
+
+.nav {
+    background     : $nav-bg;
+    display        : inline-flex;
+    max-width      : 100%;
+    width          : 100%;
+    flex-direction : row;
+    align-content  : center;
+    flex-wrap      : nowrap;
+    justify-content: center;
+    align-items    : center;
+
+    @media screen and (max-width: $mobile-break) {
+        margin-top: 55px;
+    }
+
+    ul {
+        display: inherit;
+
+        @media screen and (max-width: $mobile-break) {
+            display: inline-block;
+        }
+
+    }
+
+    &__link {
+        color          : white;
+        text-decoration: none;
+        text-transform : capitalize;
+        padding        : 15px 25px;
+        border         : 1px solid $nav-link-border;
+        margin         : 10px;
+        font-size      : $nav-link-size;
+        text-align     : center;
+        transition     : .3s ease-in-out;
+
+        @media screen and (max-width: $mobile-break) {
+            border       : none;
+            border-bottom: 1px solid $nav-link-border;
+            display      : inline-block;
+            width        : 100%;
+            margin       : 0;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        &:hover {
+            background: $nav-link-bg-current;
+        }
+    }
+}
+
+.nav-hamburger {
+    cursor       : pointer;
+    margin-right : 0;
+    background   : $nav-hamburger-bg;
+    display      : inline-block;
+    border-radius: 6px;
+    padding      : 0px 9px 6px 9px;
+    padding-top  : 13px;
+    right        : 15px;
+    position     : fixed;
+    z-index      : 9;
+    margin-top   : 5px;
+    z-index      : 99;
+
+
+    @media screen and (min-width: $mobile-break) {
+        display: none;
+    }
+
+}
+
+.nav-wrapper {
+    @media screen and (max-width: $mobile-break) {
+        padding: 0 15px;
+        display: none;
+    }
+}
+
+.openNav {
+    display: block !important;
+}

@@ -1,0 +1,19 @@
+.erik {
+    text-align   : center;
+    margin-bottom: 50px;
+
+    &__subtitle {
+        color        : #999;
+        font-style   : italic;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        color        : $gray;
+        font-size    : 32px;
+        font-style   : italic;
+        margin-bottom: 25px;
+        margin-top   : 35px;
+        font-weight  : 400;
+    }
+}

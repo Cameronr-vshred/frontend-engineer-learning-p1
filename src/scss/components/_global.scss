@@ -1,0 +1,81 @@
+$page-font: 'Open Sans',
+sans-serif !default;
+$mobile-break: 768px;
+$green       : #178A27 !default;
+$blue        : #1686C1 !default;
+$gray        : #666 !default;
+$brown       : #852406 !default;
+$submit      : #262628 !default;
+
+* {
+    scroll-behavior: smooth;
+    box-sizing     : border-box;
+    word-break     : break-word;
+    font-family    : $page-font;
+    padding        : 0;
+    margin         : 0;
+}
+
+.btn {
+    border-radius     : 5px;
+    color             : #fff;
+    font-size         : 18px;
+    padding           : 10px 30px;
+    text-decoration   : none;
+    text-transform    : capitalize;
+    -webkit-transition: all 0.3s ease;
+    transition        : all 0.3s ease;
+    text-transform    : capitalize;
+    width             : fit-content;
+    display           : block;
+    background        : #fff none repeat scroll 0 0;
+    border            : 1px solid #ccc;
+    color             : #666;
+    cursor            : pointer;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    &--blue {
+        background: $blue;
+        margin    : 0 auto;
+        color     : #fff;
+    }
+
+    &--brown {
+        background: $brown;
+        margin    : 0 auto;
+        color     : #fff;
+    }
+
+    &--center {
+        margin: 0 auto;
+    }
+
+    &--green {
+        background: $green;
+        margin    : 0 auto;
+        color     : #fff;
+    }
+
+    &--right {
+        margin-left: auto;
+    }
+
+    &--submit {
+        background   : $submit;
+        border-radius: 10px;
+        color        : #fff;
+    }
+}
+
+img {
+    display  : block;
+    max-width: 100%;
+    height   : auto;
+}
+
+picture {
+    width: 100%;
+}

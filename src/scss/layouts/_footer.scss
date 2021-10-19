@@ -1,0 +1,13 @@
+.footer {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    &__copyright {
+        color        : $gray;
+        font-size    : 12px;
+        margin-bottom: 30px;
+        margin-top   : 10px;
+    }
+}
