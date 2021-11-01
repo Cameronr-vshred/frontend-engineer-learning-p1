@@ -21,40 +21,44 @@
 
     </head>
 
-    <div class="nav-hamburger" onclick="openNav()">
-        <svg viewBox="0 0 100 80" width="30" height="24" fill="#fff">
-            <rect width="100" height="4"></rect>
-            <rect y="30" width="100" height="4"></rect>
-            <rect y="60" width="100" height="4"></rect>
-        </svg>
-    </div>
-    <header id="nav" class="nav-wrapper">
-        <nav class="nav">
-            <ul>
-                <a class="nav__link" href="#hp"><li>Homepage</li></a>
-                <a class="nav__link" href="#about-us"><li>About us</li></a>
-                <a class="nav__link" href="#services"><li>Services</li></a>
-                <a class="nav__link" href="#contact"><li>Contact</li></a>
-                <a class="nav__link" href="https://www.free-css.com/free-css-templates" target="_blank"><li>External</li></a>
-            </ul>
-        </nav>
-    </header>
+    <body> <!-- All elements except the <!DOCTYPE html> and <head> must be wrapped by the body tag I already fixed it for reference -->
 
-    <body>
-        <main>
+        <div class="nav-hamburger" onclick="openNav()">
+            <svg viewBox="0 0 100 80" width="30" height="24" fill="#fff">
+                <rect width="100" height="4"></rect>
+                <rect y="30" width="100" height="4"></rect>
+                <rect y="60" width="100" height="4"></rect>
+            </svg>
+        </div>
+
+        <header id="nav" class="nav-wrapper"> 
+        <!-- conceptually, using BEM, line 31 should be class="nav" and line 33 should be "nav__wrapper" -->
+            <nav class="nav">
+                <ul>
+                    <a class="nav__link" href="#hp"><li>Homepage</li></a>
+                    <a class="nav__link" href="#about-us"><li>About us</li></a>
+                    <a class="nav__link" href="#services"><li>Services</li></a>
+                    <a class="nav__link" href="#contact"><li>Contact</li></a>
+                    <a class="nav__link" href="https://www.free-css.com/free-css-templates" target="_blank"><li>External</li></a>
+                </ul>
+            </nav>
+        </header>
+
+        <main> <!-- ideally, all elements would get a class, main included for scalability (think mulitple pages with different versions of main)-->
             <section id="hp" class="intro">
                 <img class="intro__bg" src="./assets/bg-1.jpg" alt="intro
                     background" loading="lazy" decoding="async" width="1800"
                     height="1042" />
                 <div class="intro__content">
                     <h1 class="intro__title">conquer</h1>
-                    <h2 class="intro__subtitle">simple bootstrap template</h2>
+                    <h2 class="intro__subtitle">simple bootstrap template</h2> 
+                    <!-- a paragraph would be preferable for the h2 here -->
                 </div>
             </section>
 
             <section id="about-us">
-                <div class="upper-highlights-a">
-                    <div class="upper-highlights-a__inner">
+                <div class="upper-highlights-a"> <!-- note about class naming: class="highlights highlights--upper highlights--a" -->
+                    <div class="upper-highlights-a__inner"> <!-- note about class naming: class="highlights__inner"-->
                         <img class="upper-highlights-a__img" src="./assets/1-1.jpg"
                             alt="bootstrap" loading="lazy" decoding="async"
                             width="360" height="180" />
@@ -121,15 +125,26 @@
                     <h2 class="section-break__subtitle">Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id<br />felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia.<br />Etiam a mi quis arcu varius condimentum.</h2>
                 </div>
             </section>
-
+            <!-- 
+                I would have: 
+                    1. combined section break into the services 
+                    2. given it a top-level block class name of "services"
+                    3. use the note higher in the doc about class naming to keep the highlights class naming going
+            -->
             <section id="services">
                 <div class="lower-highlights-a">
+                    <!-- 
+                        For the highlights (in all sections) it would have been good to use either:
+                        1. a ul/li combination
+                        2. Articles for the inner highlights since it would be syndicated content
+                        3. A combo of both 1 & 2
+                    -->
                     <div class="lower-highlights-a__inner">
                         <img class="lower-highlights-a__img" src="./assets/4-1.jpg"
                             alt="column 1" loading="lazy" decoding="async"
                             width="260" height="260" />
                         <div class="lower-highlights-a__content">
-                            <h1 class="lower-highlights-a__title">Column One</h1>
+                            <h1 class="lower-highlights-a__title">Column One</h1> <!-- technically, having multiple h1's in this section is not semantic until you do the note on line 136 -->
                             <p class="lower-highlights-a__description">Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
                         </div>
                     </div>
@@ -201,7 +216,7 @@
                     </h2>
                     <form>
                         <div class="contact-form__input">
-                            <div class="contact-form__input--left-col">
+                            <div class="contact-form__input--left-col"> <!-- class="contact-form__col contact-form__col--left"-->
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name" class="form-input" placeholder="Name" />
                                 <label for="email">Email</label>
@@ -209,7 +224,7 @@
                                 <label for="subject">Subject</label>
                                 <input type="text" id="subject" name="subject" class="form-input" placeholder="Suject" />
                             </div>
-                            <div class="contact-form__input--right-col">
+                            <div class="contact-form__input--right-col"> <!-- class="contact-form__col contact-form__col--right"-->
                                 <label for="message">Message</label>
                                 <textarea name="message" class="form-input" id="comment" placeholder="Your message here..." spellcheck="false"></textarea>
                             </div>
@@ -223,6 +238,7 @@
 
             <section class="erik">
                 <h1 class="erik__title">Hi Erik!</h1>
+                <!-- Hi Cameron! -->
                 <p class="erik__subtitle">“Conquer is free Bootstrap template from TemplateMo website.<br />
                     No backlink is required to use this layout.”</p>
             </section>
@@ -232,17 +248,17 @@
             </footer>
         </main>
 
-    </body>
-
-    <script>
-        'use strict'
-        const nav = document.getElementById("nav");
-        function openNav() {
-            if (nav.classList.contains("openNav")) {
-                nav.classList.remove("openNav");
-            } else {
-                nav.classList.add("openNav");
+        
+        <script>
+            'use strict'
+            const nav = document.getElementById("nav");
+            function openNav() {
+                if (nav.classList.contains("openNav")) {
+                    nav.classList.remove("openNav");
+                } else {
+                    nav.classList.add("openNav");
+                }
             }
-        }
-    </script>
+            </script>
+    </body>
 </html>

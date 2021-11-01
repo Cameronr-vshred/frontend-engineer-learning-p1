@@ -17,7 +17,6 @@
     "parcel-plugin-custom-dist-structure": "^1.1.19",
     "sass": "^1.43.2"
   },
-
   "customDistStructure": {
     "config": {
       ".css": "css",
@@ -27,11 +26,13 @@
         ".png"
       ],
       ".fileExtension": "folder/in/dist",
-      "folder/in/dist": [ ".file", ".extensions" ]
+      "folder/in/dist": [
+        ".file",
+        ".extensions"
+      ]
     },
     "options": {
       "development": true
     }
   }
-
 }
