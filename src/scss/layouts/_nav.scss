@@ -6,7 +6,7 @@ $nav-link-size      : 20px !default;
 $nav-link-bg-current: #49505F !default;
 $mobile-break       : 768px;
 
-header {
+header { // this is a nav component file but header his here! =o
     position : fixed;
     max-width: 100%;
     width    : 100%;
